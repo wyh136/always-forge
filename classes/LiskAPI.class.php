@@ -31,7 +31,7 @@ class LiskAPI {
     }
 
     public function getStatus ($server) {
-        $url = "https//{$server->ip}:{$server->port}/api/loader/status/sync";
+        $url = "http://{$server->ip}:{$server->port}/api/loader/status/sync";
         $this->_curl->setPost (null);
         $this->_curl->setUrl ($url);
         return $this->_send_request ($server);
