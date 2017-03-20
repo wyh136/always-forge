@@ -31,21 +31,21 @@ class LiskAPI {
     }
 
     public function getStatus ($server) {
-        $url = "https://{$server->ip}:{$server->port}/api/loader/status/sync";
+        $url = "https//{$server->ip}:{$server->port}/api/loader/status/sync";
         $this->_curl->setPost (null);
         $this->_curl->setUrl ($url);
         return $this->_send_request ($server);
     }
 
     public function getForgingStatus ($server, $publicKey) {
-        $url = "https://{$server->ip}:{$server->port}/api/delegates/forging/status?publicKey={$publicKey}";
+        $url = "http://{$server->ip}:{$server->port}/api/delegates/forging/status?publicKey={$publicKey}";
         $this->_curl->setPost (null);
         $this->_curl->setUrl ($url);
         return $this->_send_request ($server);
     }
 
     public function disableForging ($server, $secret) {
-        $url = "https://{$server->ip}:{$server->port}/api/delegates/forging/disable";
+        $url = "http://{$server->ip}:{$server->port}/api/delegates/forging/disable";
         $post = array (
             'secret' => $secret
         );
@@ -56,7 +56,7 @@ class LiskAPI {
     }
 
     public function enableForging ($server, $secret) {
-        $url = "https://{$server->ip}:{$server->port}/api/delegates/forging/enable";
+        $url = "http://{$server->ip}:{$server->port}/api/delegates/forging/enable";
         $post = array (
             'secret' => $secret
         );
