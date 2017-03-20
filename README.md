@@ -11,6 +11,7 @@ Script require **PHP** with **cURL** support and **Cron**. If you want to run it
 **Remember to add your monitor's server IP to lisk whitelist (for API and forging)!**
 
 ```
+apt-get install php5-curl php5
 git clone https://github.com/4miners/always-forge
 cd always-forge
 cp config.json.example config.json
